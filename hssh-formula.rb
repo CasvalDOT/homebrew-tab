@@ -6,8 +6,11 @@ class Hssh < Formula
   license "MIT"
 
   depends_on "go" => :build
+  depends_on "fzf" => :recommended
 
   def install
     system "go", "build", *std_go_args
+    bin.mkpath
+    bin.install hssh
   end
 end
