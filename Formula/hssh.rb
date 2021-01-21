@@ -11,6 +11,6 @@ class Hssh < Formula
   def install
     system "go", "build", *std_go_args
     bin.mkpath
-    bin.install hssh
+    bin.install "hssh"
   end
 end
