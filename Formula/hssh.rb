@@ -9,8 +9,6 @@ class Hssh < Formula
   depends_on "fzf" => :recommended
 
   def install
-    system "go", "build", *std_go_args
-    bin.mkpath
-    bin.install "hssh"
+    system "go", "build", *std_go_args, "-o", "#{bin}/hssh"
   end
 end
